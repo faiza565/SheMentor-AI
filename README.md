@@ -3,6 +3,9 @@
 FastAPI backend for the SheMentor MVP — authentication, mentor discovery, AI matching,
 goal tracking, session booking, and the AI career assistant.
 
+## live demo
+http://localhost:5174/
+
 ## Setup
 
 ```bash
