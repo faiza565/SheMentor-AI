@@ -1,49 +1,183 @@
-# SheMentor API
+# 🌸 SheMentor AI
 
-FastAPI backend for the SheMentor MVP — authentication, mentor discovery, AI matching,
-goal tracking, session booking, and the AI career assistant.
+> **Empowering women through AI-powered mentorship, career guidance, and personalized support.**
 
-## live demo
+##live demo
 http://localhost:5174/
 
-## Setup
+## 📖 Overview
+
+SheMentor AI is an intelligent mentorship platform designed to connect women with guidance, resources, and AI-driven assistance throughout their educational, professional, and entrepreneurial journeys.
+
+The platform provides a modern, user-friendly interface where users can receive career advice, explore learning opportunities, manage mentorship interactions, and access personalized recommendations powered by Artificial Intelligence.
+
+This project was developed as a hackathon solution with a focus on accessibility, scalability, and real-world impact.
+
+---
+
+## ✨ Features
+
+* 🤖 AI-powered mentorship assistant
+* 💬 Intelligent chatbot for career guidance
+* 👩‍🏫 Mentor and mentee interaction
+* 📚 Personalized learning recommendations
+* 🎯 Career roadmap generation
+* 📝 Goal tracking
+* 🔍 Resource discovery
+* 🔐 Secure authentication
+* 📱 Responsive and modern UI
+* ⚡ Fast API backend
+* 🎨 Clean and intuitive user experience
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React.js
+* Vite
+* JavaScript
+* HTML5
+* CSS3
+
+### Backend
+
+* Python
+* FastAPI
+* SQLite
+
+### Development Tools
+
+* Git
+* GitHub
+* VS Code
+
+---
+
+## 📂 Project Structure
+
+```text
+SheMentor-AI/
+│
+├── src/                    # React frontend
+├── public/
+├── app/                    # Backend application
+├── shementor-backend/      # Backend modules
+├── package.json
+├── requirements.txt
+├── vite.config.js
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/faiza565/SheMentor-AI-Final.git
+```
+
+### 2. Navigate into the project
+
+```bash
+cd SheMentor-AI
+```
+
+---
+
+## 💻 Frontend Setup
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+---
+
+## ⚙️ Backend Setup
+
+Create a virtual environment:
 
 ```bash
 python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
+```
+
+Activate it:
+
+### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+Install dependencies:
+
+```bash
 pip install -r requirements.txt
-cp .env.example .env            # then fill in JWT_SECRET and OPENAI_API_KEY
+```
+
+Run the backend server according to your project entry point (for example, FastAPI with Uvicorn):
+
+```bash
 uvicorn app.main:app --reload
 ```
 
-The app defaults to a local SQLite file (`shementor.db`) so it runs with zero setup.
-Point `DATABASE_URL` in `.env` at a real Postgres instance (e.g. Supabase) when ready.
+---
 
-Interactive API docs: `http://localhost:8000/docs`
+## 🌟 Project Vision
 
-## Endpoints implemented (MVP scope)
+SheMentor AI aims to bridge the gap between aspiring women and experienced mentors by leveraging Artificial Intelligence to provide:
 
-| Area | Endpoint |
-|---|---|
-| Auth | `POST /auth/signup`, `POST /auth/login` |
-| Users | `GET /users/me`, `PUT /users/me/mentee-profile`, `PUT /users/me/mentor-profile` |
-| Mentors | `GET /mentors`, `GET /mentors/{id}` |
-| AI Matching | `POST /matching/find` |
-| Goals | `GET /goals`, `POST /goals`, `PATCH /goals/{id}/progress` |
-| Sessions | `POST /sessions`, `GET /sessions`, `PATCH /sessions/{id}/status` |
-| AI Assistant | `POST /chat/message`, `POST /chat/roadmap` |
+* Personalized career guidance
+* Skill development support
+* Educational recommendations
+* Professional networking assistance
+* Confidence-building resources
 
-## Not yet built (from the full architecture doc)
+---
 
-Messaging (Socket.io), community posts/comments, reviews, resources catalog, and
-notifications all have table definitions in `models.py` already but no routes yet —
-add them the same way the modules above are structured once the MVP core is validated.
+## 🎯 Future Enhancements
 
-## Notes
+* Video mentorship sessions
+* AI resume analysis
+* Mock interview preparation
+* Job recommendation engine
+* Scholarship finder
+* Community discussion forums
+* Achievement badges
+* Multi-language support
+* Mobile application
+* Cloud deployment
 
-- Mentor matching (`app/routes/matching.py`) uses skill-overlap scoring for the MVP.
-  Swap in embedding similarity once there's a real mentor pool to justify it.
-- `Base.metadata.create_all()` is fine for local dev; move to Alembic migrations
-  before this touches a shared database.
-- CORS is wide open (`allow_origins=["*"]`) — restrict to the deployed frontend
-  origin before shipping.
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository.
+2. Create a new feature branch.
+3. Commit your changes.
+4. Push your branch.
+5. Open a Pull Request.
+
+---
+
+## 📄 License
+
+This project is intended for educational and hackathon purposes.
+
+---
+
+
+
